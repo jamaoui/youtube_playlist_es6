@@ -1,0 +1,9 @@
+.sort-element {
+    cursor: pointer;
+}
+body > tr {
+    line-height: 2rem;
+}
+.sort-element {
+    vertical-align: middle;
+}

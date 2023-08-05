@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion étudiants</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <script src="js/script.js" defer type="module"></script>
+</head>
+<body>
+    <div class="container">
+        <div id="app">
+            <h1>Ajouter étudiant</h1>
+            <form method="post">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" name="name" id="name">
+                </div>
+                <div class="mb-3">
+                    <label for="date" class="form-label">Date</label>
+                    <input type="date" class="form-control" name="date" id="date">
+                </div>
+                <div class="mb-3">
+                    <label for="note" class="form-label">Note</label>
+                    <input type="number" max="20" min="0" step="0.1" class="form-control" name="note" id="note">
+                </div>
+                
+                <div class="mb-3">
+                    <button class="form-control btn btn-success" id="add">Ajouter</button>
+                </div>
+            </form>
+            <hr>
+            <h1>Liste des étudiants</h1>
+            <span><button class="btn btn-primary" id="refresh">Actualiser la liste</button></span>
+            <div class="table-responsive my-3">
+                <table class="table">
+                    <thead>
+                        <tr class="table-primary">
+                            <th class="sort-element" data-column="id" scope="col">#ID <span></span></th>
+                            <th class="sort-element" data-column="name" scope="col">Nom <span></span></th>
+                            <th class="sort-element" data-column="date" scope="col">Age <span></span></th>
+                            <th class="sort-element" data-column="note" scope="col">Note <span></span></th>
+                            <th scope="col">Supprimer</th>
+                        </tr>
+                    </thead>
+                    <tbody class="liste-etudiants">
+
+                    </tbody>
+                </table>
+            </div>
+            
+        </div>
+    </div>
+</html>
